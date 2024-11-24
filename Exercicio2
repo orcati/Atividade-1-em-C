@@ -1,0 +1,61 @@
+//Criar uma matriz quadrada onde o usuário fornece o tamanho (n), e a matriz segue o padrão especificado onde os elementos abaixo da diagonal principal são preenchidos com números crescentes de 1 até o número da linha correspondente, e os elementos na diagonal principal são o próprio índice da linha mais um, enquanto os elementos acima da diagonal são zeros
+
+#include <stdio.h>
+
+int main() {
+    int n, i=0, j=0;
+    
+    printf("Digite a ordem da matriz: ");
+    scanf("%d", &n);
+    
+    int mat[n][n];
+    
+    for(i=0; i<n;i++){
+        for(j=0; j<n; j++){
+            if(j<=i)
+                mat[i][j]=j+1;
+            else
+                mat[i][j]=0;
+        }
+    }
+
+    for(i=0; i<n; i++){
+        for(j=0; j<n; j++){
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+//exercício 2 - solução alternativa
+//3 jadores 5 jogadas imprimir pontuacao e vencedor
+#include <stdio.h>
+
+int main() {
+    int n, i=0, j=0;
+    
+    printf("Digite a ordem da matriz: ");
+    scanf("%d", &n);
+    
+    int mat[n][n];
+    for(i=0; i<n;i++){
+        for(j=0; j<n; j++){
+                mat[i][j]=0;
+        }
+    }
+    for(i=0; i<n;i++){
+        for(j=0; j<n; j++){
+            if(j<=i)
+                mat[i][j]=j+1;
+        }
+    }
+
+    for(i=0; i<n;i++){
+        for(j=0; j<n; j++){
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+return 0:
+}
